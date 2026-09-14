@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baggy Clothing | Register</title>
+
+    <link rel="stylesheet" href="brand.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<header class="auth-header">
+    <a href="index.html" class="brand-logo">
+        <span class="word">BAGGY</span>
+        <span class="sub">CLOTHING</span>
+    </a>
+</header>
+
+<div class="auth-wrap">
+
+    <div class="auth-card">
+
+        <p class="eyebrow">Join us</p>
+        <h1>Create account.</h1>
+        <p class="subtitle">Join the Baggy Clothing community.</p>
+
+        <form id="registerForm">
+
+            <div class="field">
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your full name"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="you@email.com"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create a password"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm your password"
+                    required
+                >
+            </div>
+
+            <label class="terms">
+                <input type="checkbox" id="terms" required>
+                I agree to the terms and conditions.
+            </label>
+
+            <button type="submit" class="btn btn-primary">Create account</button>
+
+            <p id="registerMessage"></p>
+
+        </form>
+
+        <p class="switch">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+</div>
+
+<a href="index.html" class="back-link">← Back to website</a>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* ==========================================================
+   AUTH — shared by login.html and register.html
+   ========================================================== */
+
+.auth-header {
+    padding: 26px var(--edge);
+}
+
+.auth-wrap {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    background: var(--bone);
+    padding: 50px 44px;
+}
+
+.auth-card .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--stitch);
+    font-weight: 600;
+}
+
+.auth-card h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 42px);
+    margin: 14px 0 8px;
+    transform: scaleX(1.05);
+    transform-origin: left;
+}
+
+.auth-card .subtitle {
+    color: var(--concrete);
+    font-size: 13px;
+    margin-bottom: 34px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    margin-bottom: 22px;
+}
+
+.field label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: var(--ink);
+}
+
+.field input {
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid rgba(22,20,15,0.25);
+    background: transparent;
+    padding: 12px 0;
+    font-family: var(--font-body);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.field input:focus {
+    border-color: var(--stitch);
+}
+
+.field-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    margin-bottom: 26px;
+}
+
+.field-row label {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.field-row input[type="checkbox"] {
+    width: auto;
+}
+
+.field-row a {
+    text-decoration: underline;
+    color: var(--concrete);
+}
+
+.terms {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    font-size: 11px;
+    color: var(--concrete);
+    margin: 4px 0 26px;
+}
+
+.terms input {
+    width: auto;
+    margin-top: 2px;
+}
+
+#loginMessage,
+#registerMessage {
+    margin-top: 16px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.switch {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 28px;
+    color: var(--concrete);
+}
+
+.switch a {
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 11px;
+    color: var(--concrete);
+}
+
+@media (max-width: 500px) {
+    .auth-card {
+        padding: 40px 26px;
+    }
+}

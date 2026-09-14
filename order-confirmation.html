@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Baggy Clothing | Order Confirmed</title>
+
+    <link rel="stylesheet" href="brand.css">
+    <link rel="stylesheet" href="order-confirmation.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a href="index.html" class="brand-logo">
+        <span class="word">BAGGY</span>
+        <span class="sub">CLOTHING</span>
+    </a>
+
+    <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="product.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<main class="confirmation-container">
+
+    <div class="success-icon">✓</div>
+
+    <p class="small-title">Thank you for shopping with Baggy</p>
+
+    <h1>Order confirmed</h1>
+
+    <p class="message">
+        Your payment was successful and your order has been received.
+    </p>
+
+
+    <section class="order-card">
+
+        <div class="order-header">
+
+            <div>
+                <span>ORDER REFERENCE</span>
+                <strong id="orderReference">Loading...</strong>
+            </div>
+
+            <div>
+                <span>PAYMENT STATUS</span>
+                <strong id="paymentStatus">PAID</strong>
+            </div>
+
+        </div>
+
+
+        <div class="customer-details">
+
+            <h2>Delivery information</h2>
+
+            <p><strong>Name:</strong> <span id="customerName">Loading...</span></p>
+            <p><strong>Email:</strong> <span id="customerEmail">Loading...</span></p>
+            <p><strong>Phone:</strong> <span id="customerPhone">Loading...</span></p>
+            <p><strong>Address:</strong> <span id="customerAddress">Loading...</span></p>
+            <p><strong>City:</strong> <span id="customerCity">Loading...</span></p>
+            <p><strong>State:</strong> <span id="customerState">Loading...</span></p>
+
+        </div>
+
+
+        <div class="products-section">
+            <h2>Your items</h2>
+            <div id="orderProducts"></div>
+        </div>
+
+
+        <div class="total-section" style="border-bottom: 1px solid rgba(22,20,15,0.12); padding-bottom: 18px;">
+            <span>DELIVERY FEE</span>
+            <strong id="orderDeliveryFee" style="font-size: 14px;">₦0</strong>
+        </div>
+
+
+        <div class="total-section">
+            <span>TOTAL PAID</span>
+            <strong id="orderTotal">₦0</strong>
+        </div>
+
+    </section>
+
+
+    <div class="buttons">
+        <a href="shop.html" class="btn btn-primary">Continue shopping</a>
+        <a href="index.html" class="btn btn-outline">Back to home</a>
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+            <span class="word">BAGGY</span>
+            <p>Premium oversized clothing designed for people who don't follow the crowd.</p>
+
+            <div class="social-row">
+                <a href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.78.22 2.41.46a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.24.63.41 1.35.46 2.41C21.97 8.94 22 9.3 22 12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.78-.46 2.41a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.63.24-1.35.41-2.41.46C15.06 21.99 14.7 22 12 22s-3.06-.01-4.12-.06c-1.06-.05-1.78-.22-2.41-.46a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.24-.63-.41-1.35-.46-2.41C2.03 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.78.46-2.41a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.44 2.55c.63-.24 1.35-.41 2.41-.46C8.94 2.03 9.3 2 12 2zm0 1.8c-2.65 0-2.98.01-4.03.06-.86.04-1.33.18-1.64.3-.41.16-.71.35-1.02.66-.31.31-.5.61-.66 1.02-.12.31-.26.78-.3 1.64C4.3 8.02 4.29 8.35 4.29 12s.01 2.98.06 4.03c.04.86.18 1.33.3 1.64.16.41.35.71.66 1.02.31.31.61.5 1.02.66.31.12.78.26 1.64.3 1.05.05 1.38.06 4.03.06s2.98-.01 4.03-.06c.86-.04 1.33-.18 1.64-.3.41-.16.71-.35 1.02-.66.31-.31.5-.61.66-1.02.12-.31.26-.78.3-1.64.05-1.05.06-1.38.06-4.03s-.01-2.98-.06-4.03c-.04-.86-.18-1.33-.3-1.64a2.7 2.7 0 0 0-.66-1.02 2.7 2.7 0 0 0-1.02-.66c-.31-.12-.78-.26-1.64-.3C14.98 3.81 14.65 3.8 12 3.8zm0 3.05a5.15 5.15 0 1 1 0 10.3 5.15 5.15 0 0 1 0-10.3zm0 1.8a3.35 3.35 0 1 0 0 6.7 3.35 3.35 0 0 0 0-6.7zm5.36-1.99a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <svg viewBox="0 0 24 24"><path d="M18.24 2.75h3.3l-7.2 8.23 8.47 11.27h-6.63l-5.19-6.8-5.94 6.8H1.75l7.7-8.8L1.36 2.75h6.8l4.69 6.2zm-1.16 17.52h1.83L7 4.6H5.03z"/></svg>
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.46-.15-.65.14-.19.3-.75.94-.92 1.13-.17.2-.34.22-.63.08-.29-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.3-.02-.46.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.49.1-.2.05-.37-.02-.51-.08-.15-.65-1.58-.9-2.16-.24-.57-.48-.5-.65-.5-.17-.01-.36-.01-.56-.01a1.08 1.08 0 0 0-.78.36c-.27.29-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.17 5.02 4.44.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.11.56-.08 1.7-.7 1.94-1.36.24-.67.24-1.25.17-1.36-.07-.12-.27-.19-.56-.34zM12.04 2C6.5 2 2 6.48 2 12c0 1.86.5 3.6 1.38 5.1L2 22l4.99-1.31A9.96 9.96 0 0 0 12.04 22C17.58 22 22 17.52 22 12S17.58 2 12.04 2zm0 18.13c-1.7 0-3.29-.47-4.65-1.28l-.33-.2-3.06.8.82-2.98-.22-.31A8.12 8.12 0 0 1 3.87 12c0-4.5 3.67-8.15 8.17-8.15S20.2 7.5 20.2 12c0 4.5-3.66 8.13-8.16 8.13z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>SHOP</h4>
+            <a href="shop.html">T-Shirts</a>
+            <a href="shop.html">Hoodies</a>
+            <a href="shop.html">Trousers</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>COMPANY</h4>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>SECURE PAYMENT</h4>
+            <div class="payment-row">
+                <span class="pay-badge" aria-label="Visa">
+                    <svg viewBox="0 0 48 16"><text x="0" y="13" font-family="Arial, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text></svg>
+                </span>
+                <span class="pay-badge" aria-label="Mastercard">
+                    <svg viewBox="0 0 40 24">
+                        <circle cx="15" cy="12" r="9" fill="#EB001B"/>
+                        <circle cx="25" cy="12" r="9" fill="#F79E1B" fill-opacity="0.9"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 Baggy Clothing. All rights reserved.</span>
+        <span>Lagos, Nigeria</span>
+    </div>
+
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

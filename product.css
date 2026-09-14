@@ -1,0 +1,132 @@
+/* ==========================================================
+   PRODUCT — page-specific styles
+   ========================================================== */
+
+.page-heading {
+    padding: 70px var(--edge) 50px;
+}
+
+.page-heading .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--stitch);
+    font-weight: 600;
+}
+
+.page-heading h1 {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 68px);
+    margin-top: 14px;
+    transform: scaleX(1.06);
+    transform-origin: left;
+}
+
+.page-heading p {
+    color: var(--concrete);
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.product-section {
+    padding: 20px var(--edge) 110px;
+}
+
+.piece-hint {
+    font-size: 11px;
+    color: var(--concrete);
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 20px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.piece-media {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--bone);
+}
+
+.piece-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.45s ease;
+}
+
+.piece-flat { opacity: 1; z-index: 2; }
+.piece-worn { opacity: 0; z-index: 1; }
+
+.card:hover .piece-flat,
+.card.is-revealed .piece-flat { opacity: 0; }
+
+.card:hover .piece-worn,
+.card.is-revealed .piece-worn { opacity: 1; }
+
+.piece-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--bone);
+    color: var(--ink);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 6px 10px;
+    z-index: 3;
+}
+
+.card > p {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--concrete);
+    margin-top: 16px;
+}
+
+.card h2 {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.card strong {
+    font-size: 14px;
+}
+
+.add-cart {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    background: var(--ink);
+    color: var(--bone);
+    border: none;
+    padding: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.add-cart:hover {
+    background: var(--stitch);
+}
+
+@media (max-width: 800px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 14px;
+    }
+}
+
+@media (max-width: 520px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

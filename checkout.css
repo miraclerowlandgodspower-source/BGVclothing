@@ -1,0 +1,196 @@
+/* ==========================================================
+   CHECKOUT — page-specific styles
+   ========================================================== */
+
+.page-heading {
+    padding: 70px var(--edge) 50px;
+}
+
+.page-heading .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--stitch);
+    font-weight: 600;
+}
+
+.page-heading h1 {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 68px);
+    margin-top: 14px;
+    transform: scaleX(1.06);
+    transform-origin: left;
+}
+
+.checkout-container {
+    width: 100%;
+    padding: 20px var(--edge) 100px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 60px;
+}
+
+.checkout-form h2 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.field-group {
+    margin-bottom: 22px;
+}
+
+.field-row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.field-group label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.field-group label span {
+    color: var(--concrete);
+    font-weight: normal;
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea {
+    width: 100%;
+    border: 1px solid rgba(22,20,15,0.2);
+    background: var(--bone);
+    padding: 14px;
+    outline: none;
+    font-family: var(--font-body);
+    font-size: 13px;
+    transition: border-color 0.2s ease;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus {
+    border-color: var(--stitch);
+}
+
+.field-group textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+#placeOrderBtn {
+    width: 100%;
+    border: none;
+    background: var(--ink);
+    color: var(--bone);
+    padding: 17px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+#placeOrderBtn:hover {
+    background: var(--stitch);
+}
+
+#placeOrderBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#checkoutMessage {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.order-summary {
+    background: var(--bone);
+    padding: 32px;
+    height: fit-content;
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+}
+
+.order-summary h2 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    margin-bottom: 26px;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(22,20,15,0.1);
+    font-size: 12px;
+}
+
+.checkout-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.checkout-item span {
+    color: var(--concrete);
+    font-size: 10px;
+}
+
+.no-items {
+    font-size: 13px;
+    color: var(--concrete);
+    padding: 20px 0;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.summary-line span {
+    color: var(--concrete);
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1.5px solid rgba(22,20,15,0.15);
+    padding-top: 22px;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back-cart {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--concrete);
+}
+
+@media (max-width: 900px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+    .order-summary {
+        position: static;
+    }
+    .field-row2 {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

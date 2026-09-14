@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111;
+    background: #f4f4f2;
+}
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.register-form {
+    background: white;
+    width: 100%;
+    max-width: 550px;
+    padding: 55px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #111;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 13px;
+    margin: 12px 0 35px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > label:not(.terms) {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #bbb;
+    padding: 13px 0;
+    outline: none;
+    margin-bottom: 23px;
+}
+
+.terms {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 10px;
+    margin: 5px 0 25px;
+}
+
+.terms input {
+    width: auto;
+}
+
+form button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 17px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#registerMessage {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.switch {
+    text-align: center;
+    font-size: 11px;
+    margin-top: 25px;
+    color: #777;
+}
+
+.switch a {
+    color: #111;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 10px;
+}
+
+@media (max-width: 600px) {
+
+    .register-form {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}

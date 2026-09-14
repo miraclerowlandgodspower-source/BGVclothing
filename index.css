@@ -1,0 +1,327 @@
+/* ==========================================================
+   INDEX — page-specific styles
+   (brand.css must be linked before this file)
+   ========================================================== */
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+
+    padding: 60px var(--edge) 80px;
+}
+
+.hero-text .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--stitch);
+    font-weight: 600;
+}
+
+.hero-text h1 {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 0.92;
+    letter-spacing: -1px;
+    margin: 20px 0 24px;
+
+    /* the literal "baggy" stretch on the headline */
+    transform: scaleX(1.08);
+    transform-origin: left;
+}
+
+.hero-text p {
+    max-width: 420px;
+    color: var(--concrete);
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 32px;
+}
+
+
+    /* Drop your own hero image or video inside this box —
+       it will always fill the space cleanly at any size. */
+
+
+
+/* ==========================================================
+   SECTION HEADINGS
+   ========================================================== */
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 var(--edge);
+    margin-bottom: 40px;
+}
+
+.section-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 42px);
+    margin-top: 6px;
+}
+
+.section-head .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--stitch);
+    font-weight: 600;
+}
+
+.section-head a {
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--ink);
+    padding-bottom: 3px;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   COLLECTION — categories
+   ========================================================== */
+
+.category-strip {
+    padding: 100px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    padding: 0 var(--edge);
+}
+
+.category-card {
+    position: relative;
+}
+
+.category-card .media-box {
+    aspect-ratio: 3 / 4;
+}
+
+.category-card .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    color: var(--bone);
+    background: linear-gradient(transparent, rgba(0,0,0,0.65));
+}
+
+.category-card .label h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+}
+
+.category-card .label span {
+    font-size: 10px;
+    letter-spacing: 1px;
+    opacity: 0.85;
+}
+
+@media (max-width: 800px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+
+/* ==========================================================
+   FEATURED COLLECTION — the flat → worn reveal effect
+   ========================================================== */
+
+.pieces {
+    background: var(--bone);
+    padding: 100px 0;
+}
+
+.piece-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 20px;
+    padding: 0 var(--edge);
+}
+
+.piece {
+    cursor: pointer;
+}
+
+.piece-media {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--canvas);
+}
+
+.piece-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.45s ease;
+}
+
+.piece-flat {
+    opacity: 1;
+    z-index: 2;
+}
+
+.piece-worn {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Desktop: reveal on hover */
+.piece:hover .piece-flat,
+.piece.is-revealed .piece-flat {
+    opacity: 0;
+}
+
+.piece:hover .piece-worn,
+.piece.is-revealed .piece-worn {
+    opacity: 1;
+}
+
+.piece-tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--bone);
+    color: var(--ink);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 6px 10px;
+    z-index: 3;
+}
+
+.piece-info {
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.piece-info div p {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--concrete);
+    margin-bottom: 6px;
+}
+
+.piece-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.piece-info strong {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.piece .add-cart {
+    margin-top: 14px;
+    width: 100%;
+    background: var(--ink);
+    color: var(--bone);
+    border: none;
+    padding: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.piece .add-cart:hover {
+    background: var(--stitch);
+}
+
+.piece-hint {
+    text-align: center;
+    font-size: 11px;
+    color: var(--concrete);
+    margin-top: -10px;
+    margin-bottom: 40px;
+    padding: 0 var(--edge);
+}
+
+@media (max-width: 800px) {
+    .piece-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 14px;
+    }
+}
+
+@media (max-width: 520px) {
+    .piece-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================================
+   STATEMENT
+   ========================================================== */
+
+.statement {
+    background: var(--ink);
+    color: var(--bone);
+    padding: 110px var(--edge);
+}
+
+.statement .eyebrow {
+    color: var(--stitch);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.statement h2 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1;
+    max-width: 700px;
+    margin: 22px 0 30px;
+}
+
+.statement a {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--stitch);
+    padding-bottom: 4px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE — hero stacking
+   ========================================================== */
+
+@media (max-width: 860px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+    }
+
+    .hero-media {
+        order: -1;
+    }
+
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

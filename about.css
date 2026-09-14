@@ -1,0 +1,88 @@
+/* ==========================================================
+   ABOUT — page-specific styles
+   ========================================================== */
+
+.about-hero {
+    min-height: 480px;
+    padding: 8% var(--edge);
+    display: flex;
+    align-items: center;
+    color: var(--bone);
+    background: var(--ink);
+}
+
+.about-hero .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--stitch);
+    font-weight: 600;
+}
+
+.about-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 7vw, 84px);
+    line-height: 0.95;
+    margin-top: 18px;
+    transform: scaleX(1.06);
+    transform-origin: left;
+}
+
+.story {
+    padding: 100px var(--edge);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.story .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--stitch);
+    font-weight: 600;
+}
+
+.story h2 {
+    font-family: var(--font-display);
+    font-size: 40px;
+    line-height: 1;
+    margin: 20px 0 26px;
+}
+
+.story p {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--concrete);
+    margin-bottom: 16px;
+}
+
+.values {
+    background: var(--bone);
+    padding: 90px var(--edge);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.values h2 {
+    font-family: var(--font-display);
+    font-size: 40px;
+    color: var(--stitch);
+}
+
+.values h3 {
+    margin: 14px 0 10px;
+    font-size: 16px;
+}
+
+.values p {
+    color: var(--concrete);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+    .story, .values {
+        grid-template-columns: 1fr;
+    }
+}
