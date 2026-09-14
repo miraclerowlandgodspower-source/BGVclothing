@@ -1,0 +1,24 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node",
+      "config": {
+        "excludeFiles": "**/.env*"
+      }
+    },
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.css", "use": "@vercel/static" },
+    { "src": "config.js", "use": "@vercel/static" },
+    { "src": "script.js", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api(?:/.*)?", "dest": "/backend/server.js" },
+    { "src": "/backend(?:/.*)?", "status": 404 },
+    { "handle": "filesystem" },
+    { "src": "/", "dest": "/index.html" }
+  ]
+}
