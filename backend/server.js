@@ -35,9 +35,23 @@ app.get("/", (req, res) => {
 });
 
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+// ==========================================
+// LOCAL DEV vs VERCEL
+// ==========================================
+// When you run this file directly (npm start / node server.js
+// on your own machine), start a normal always-on server.
+// On Vercel, this file is imported instead of run directly —
+// Vercel wraps the exported `app` as a serverless function and
+// handles starting/stopping it, so app.listen() must NOT run
+// there (it would try to bind a port that doesn't exist).
+
+if (require.main === module) {
+
+    app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+    });
+
+}
+
 
 module.exports = app;
