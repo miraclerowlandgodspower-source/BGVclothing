@@ -15,4 +15,8 @@
 // Every fetch() call in script.js and checkout.html uses this
 // value instead of a hardcoded localhost address.
 
+<<<<<<< HEAD
 const API_BASE = window.location.origin;
+=======
+const API_BASE = window.location.origin;
+>>>>>>> 8e83c1ff6af00eb1698ddf57dcd02035ec689486
